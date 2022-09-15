@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Botão de alterar tema -->
+    <div id="botaoTema">
+        <input type="checkbox" class="checkbox" id="chk">
+        <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i> 
+            <div class="ball"></div>
+        </label>
+    </div>
+    <!-- Tarefas -->
+    <h1 id="title">Lista de tarefas</h1>
+
+    <div class="conteudo">
+        <div class="topo">
+            <input type="text"
+                id="inputNovaTarefa"
+                placeholder="Adicione uma nova tarefa">
+            <button id="btnAddTarefa">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+        <ul id="listaTarefas">
+        </ul>
+    </div>
+
+    <div id="janelaEdicao">
+        <button id="janelaEdicaoBtnFechar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2 id="idTarefaEdicao">#1021</h2>
+        <hr>
+        <form>
+            <div class="frm-linha">
+                <label for="nome">Nome</label>
+                <input type="text" id="inputTarefaNomeEdicao">
+            </div>
+            <div class="frm-linha">
+                <button id="btnAtualizarTarefa">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <div id="janelaEdicaoFundo"></div>
+
+    <script src="assets/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/611666c32e.js" crossorigin="anonymous"></script>
+</body>
+</html>

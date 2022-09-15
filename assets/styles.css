@@ -1,0 +1,284 @@
+body {
+    background-color: black;
+    color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+body.white-mode {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.conteudo {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #2b2a2a;
+    padding: 55px;
+    border-radius: 12px;
+}
+
+.conteudo.white-mode {
+    background-color: #dee2e6;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topo input {
+    width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    outline: none;
+    font-size: 1.2rem;
+    background: #191818;
+    color: #fff;
+}
+
+.topo input.white-mode {
+    border: #a4a4a4;
+    background-color: #a4a4a4;
+    color: #000;
+}
+
+.topo button {
+    width: 45px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    outline: none;
+    background: #191818;
+    color: #fff;
+}
+
+.topo button.white-mode {
+    border: #a4a4a4;
+    background-color: #a4a4a4;
+    color: #000;
+}
+
+.topo button:hover {
+    background: #1f1e1e;
+    cursor: pointer;
+}
+
+.topo button:hover.white-mode {
+    background-color: #a4a4a4;
+}
+
+#botaoTema {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    
+    width: 40px;
+    transform: scale(1.5);
+}
+
+.label.white-mode {
+    background-color: #191818;
+}
+
+.label .ball {
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.label .ball.white-mode {
+    background-color: #fff;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+/* Tarefas */
+#listaTarefas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaTarefas .liTarefa{
+    padding: 20px;
+    display: flex;
+    background: #191818;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#listaTarefas .liTarefa.white-mode {
+    border: #a4a4a4;
+    background-color: #a4a4a4;
+    color: #000;
+}
+
+.btnAcao {
+    border-radius: 20px;
+    border: 1px solid #191818;
+    width: 38px;
+    height: 38px;
+    margin: 8px;
+    cursor: pointer;
+    color: #fff;
+    background: #2b2a2a;
+}
+
+.textTarefa {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+    color: #dee2e6;
+}
+
+.btnAcao:hover {
+    background: #3c3a3a;
+    cursor: pointer;
+}
+
+#janelaEdicao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #191818;
+    border: 1px solid #2f2e2e;
+    width: 415px;
+    border-radius: 12px;
+    z-index: 200;
+    display: none;
+}
+
+#janelaEdicao.white-mode {
+    border: #a4a4a4;
+    background-color: #a4a4a4;
+    color: #000;
+}
+
+#janelaEdicao.abrir {
+    display: block !important;
+}
+
+#janelaEdicaoFundo {
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 100;
+    right: 0;
+    display: none;
+}
+
+#janelaEdicaoFundo.abrir {
+    display: block !important;
+}
+
+#janelaEdicaoBtnFechar {
+    position: absolute;
+    top: -25px;
+    right: -18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #2d2c2c;
+    background: #2d2c2c;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.frm-linha {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.frm-linha label {
+    margin-bottom: 7px;
+}
+
+.frm-linha input {
+    padding: 15px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid #191818;
+    font-size: 1.2rem;
+    background: #2d2c2c;
+    color: #fff;
+}
+
+.frm-linha button {
+    background: #2d2c2c;
+    border: 1px solid #191818;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    height: 50px;
+    outline: none;
+}
+
+.frm-linha button:hover {
+    background: #3c3a3a;
+}
+
+.liTarefaTeste.white-mode {
+    background-color: #f1c40f;
+}
